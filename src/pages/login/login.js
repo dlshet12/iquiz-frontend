@@ -1,6 +1,7 @@
 import React from 'react';
 import './login.css';
 import TextField from '../../components/textField/textField';
+import Button from '../../components/button/button';
 function Login() {
   return (
     <div className="container">
@@ -21,15 +22,8 @@ function Login() {
               </div>
             </div>
             <div className="loginButtonContainer">
-              <Button
-                className="button primaryButton"
-                type="button"
-              >
-                Login
-              </Button>
-              <Button className="button secondaryButton" type="button">
-                Register
-              </Button>
+              <Button title="Login"/>
+              <Button isPrimary={false} title="Register"/>
             </div>
           </div>
         </div>

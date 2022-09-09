@@ -1,8 +1,8 @@
 import React from "react";
 import "./button.css"
-const Button = () => {
+const Button = ({title, isPrimary = true}) => {
     return(
-        <Button className="button" ></Button>
+        <button className={`button ${isPrimary ? 'primaryButton' : 'secondaryButton'}`} >{title}</button>
     );
 }
 export default Button

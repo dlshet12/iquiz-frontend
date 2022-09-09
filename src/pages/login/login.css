@@ -79,33 +79,6 @@
     align-items: flex-start;
     justify-content: space-between;
 }
-.button {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    transition: ease-in-out 0.2s;
-    border: 4px solid;
-}
-.primaryButton{
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.456);
-    background-color: #F68F00;
-    border-color: #F68F00;
-}
-.primaryButton:hover{
-    box-shadow: none;
-}
-.secondaryButton{
-    border-color: white;
-    background-color: white;
-}
-.secondaryButton:hover{
-    border-color: white;
-    color: black;
-    background-color: transparent;
-}
 .LoginRight{
     background-image: url("../../asset/picture/login.png");
     background-repeat: no-repeat;
