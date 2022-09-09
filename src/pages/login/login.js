@@ -7,7 +7,7 @@ function Login() {
         <div className="container">
             <div className="LoginLeft">
                 <div>
-                    <h1><span style={{ color: 'black' }}>i</span>Quiz</h1>
+                    <h1  style={{ color: '#F68F00' }}><span style={{ color: 'black' }}>i</span>Quiz</h1>
                     <p>Login To Your Account</p>
                 </div>
                 <div>
