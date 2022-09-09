@@ -1,4 +1,4 @@
-.container {
+/* .container {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -15,13 +15,13 @@
     margin-right: -100px;
     margin-top: -90px; 
 }
-h1 {
+ h1 {
     color: #000000;
     font-family: "McLaren", cursive;
     font-size: 55px;
     font-weight: 300; 
     text-shadow: 2px 4px #565050;
-   }
+   } 
 .nametextField {
     display: flex;
     flex-direction: row;
@@ -60,4 +60,4 @@ input::placeholder{
 }
 
 
-
+ */

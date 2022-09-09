@@ -1,42 +1,45 @@
-import React from "react";
-import "./login.css";
-
+import React from 'react';
+import './login.css';
 
 function Login() {
-    return (
-        <div className="container">
-            <div className="LoginLeft">
-                <div>
-                    <h1  style={{ color: '#F68F00' }}><span style={{ color: 'black' }}>i</span>Quiz</h1>
-                    <p>Login To Your Account</p>
-                </div>
-                <div>
-                    <input className="textfield" type="text" placeholder="Username or Email" />
-                    <input className="textfield" type="text" placeholder="Password" />
-                    <div ><p className="password">forgot Your Password?</p></div>
-                </div>
-                <div>
-                    <button className="textfield button up"  type="button" style={{ backgroundColor: '#F68F00' }} >Login</button>
-                    <button className="textfield button" type="button">Register</button>
-                </div>
+  return (
+    <div className="container">
+      <div className="LoginLeft">
+        <div className="loginLeftSubContainer">
+          <div className="loginLogoContainer">
+            <h1 className="logo">
+              <span>i</span>Quiz
+            </h1>
+            <p className="heading">Login To Your Account</p>
+          </div>
+          <div className="loginFormContainer">
+            <div className="loginTextFieldsContainer">
+              <input
+                className="textfield"
+                type="text"
+                placeholder="Username or Email"
+              />
+              <input className="textfield" type="text" placeholder="Password" />
+              <div>
+                <p className="forgotPasswordText">forgot Your Password?</p>
+              </div>
             </div>
-            <div className="LoginRight">
-
+            <div className="loginButtonContainer">
+              <button
+                className="button primaryButton"
+                type="button"
+              >
+                Login
+              </button>
+              <button className="button secondaryButton" type="button">
+                Register
+              </button>
             </div>
+          </div>
         </div>
-    )
+      </div>
+      <div className="LoginRight"></div>
+    </div>
+  );
 }
 export default Login;
-
-
-
-
-
-
-
-
-
-
-
-
-

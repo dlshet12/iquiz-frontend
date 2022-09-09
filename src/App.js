@@ -12,7 +12,7 @@ function App() {
   return (
    <Routes>
     <Route exact path = "/" element = {<Login/>}/>
-   <Route path = "/Register" element = { <Register/>} />
+    <Route path = "/Register" element = { <Register/>} />
     <Route path = "/Categories" element = { <Categories/>} />
     <Route path = "/Score" element = { <Score/>} />
     <Route path = "/Questions" element = { <Questions/>} />
