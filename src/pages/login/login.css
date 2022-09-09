@@ -68,19 +68,6 @@
     align-items: flex-start;
 }
 
-.textfield{
-    width: 100%;
-    padding: 20px;
-    border: #EACECE;
-    border-radius: 20px;
-    background-color: #EACECE;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    box-sizing: border-box;
-    margin-bottom: 10px;
- }
- .textfield::placeholder{
-    color: black;
-}
 .forgotPasswordText{
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

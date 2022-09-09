@@ -1,6 +1,6 @@
 import React from 'react';
 import './login.css';
-
+import TextField from '../../components/textField/textField';
 function Login() {
   return (
     <div className="container">
@@ -14,12 +14,8 @@ function Login() {
           </div>
           <div className="loginFormContainer">
             <div className="loginTextFieldsContainer">
-              <input
-                className="textfield"
-                type="text"
-                placeholder="Username or Email"
-              />
-              <input className="textfield" type="text" placeholder="Password" />
+                <TextField type="text" placeholder="Email"/>
+                <TextField type="password" placeholder="Password"/>
               <div>
                 <p className="forgotPasswordText">forgot Your Password?</p>
               </div>
