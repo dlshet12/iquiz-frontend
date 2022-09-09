@@ -21,15 +21,15 @@ function Login() {
               </div>
             </div>
             <div className="loginButtonContainer">
-              <button
+              <Button
                 className="button primaryButton"
                 type="button"
               >
                 Login
-              </button>
-              <button className="button secondaryButton" type="button">
+              </Button>
+              <Button className="button secondaryButton" type="button">
                 Register
-              </button>
+              </Button>
             </div>
           </div>
         </div>
