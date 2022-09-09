@@ -5,7 +5,6 @@
     flex-direction: row;
     justify-content: space-between;
 }
-
 .LoginLeft {
     height: 100%;
     width: 50%;
@@ -15,6 +14,22 @@
     justify-content: space-around;
     padding: 10px;
 }
+.loginLeftSubContainer {
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.loginLogoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 .logo {
     font-family: "McLaren", cursive;
     font-size: 55px;
@@ -24,6 +39,11 @@
     margin: 0;
     padding: 0; 
 }
+
+.logo > span {
+    color: black;
+}
+
 .heading {
     margin-top: 50px;
    margin-left: 12px;
@@ -32,8 +52,14 @@
     margin: 0;
     padding: 0;  
 }
-.logo > span {
-    color: black;
+
+.loginFormContainer {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 .loginTextFieldsContainer {
     width: 100%;
@@ -42,30 +68,23 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
+.textfield{
+    width: 100%;
+    padding: 20px;
+    border: #EACECE;
+    border-radius: 20px;
+    background-color: #EACECE;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+ }
+ .textfield::placeholder{
+    color: black;
+}
 .forgotPasswordText{
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.textfield{
-   width: 100%;
-   padding: 20px;
-   border: #EACECE;
-   border-radius: 20px;
-   background-color: #EACECE;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   box-sizing: border-box;
-   margin-bottom: 10px;
-}
-input::placeholder{
-    color: #000;
-}
-.LoginRight{
-    background-image: url("../../asset/picture/login.png");
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 50%;
-    background-position: center center;
-    background-size: contain;
 }
 .loginButtonContainer {
     width: 100%;
@@ -84,7 +103,6 @@ input::placeholder{
     transition: ease-in-out 0.2s;
     border: 4px solid;
 }
-
 .primaryButton{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.456);
     background-color: #F68F00;
@@ -102,25 +120,11 @@ input::placeholder{
     color: black;
     background-color: transparent;
 }
-.loginLogoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.loginLeftSubContainer {
-    height: 80%;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.loginFormContainer {
-    height: 70%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+.LoginRight{
+    background-image: url("../../asset/picture/login.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+    background-position: center center;
+    background-size: contain;
 }
