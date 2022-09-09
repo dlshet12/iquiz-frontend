@@ -22,7 +22,8 @@ function Login() {
               </div>
             </div>
             <div className="loginButtonContainer">
-              <Button title="Login"/>
+              <Button onClick={console.log("login succesfull")} title="Login"/>
+              
               <Button isPrimary={false} title="Register"/>
             </div>
           </div>
