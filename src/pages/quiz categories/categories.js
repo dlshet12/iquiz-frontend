@@ -1,23 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./categories.css";
+import { useNavigate } from 'react-router-dom'
+import QuizTile from "../../components/quizTitle/quizTitle";
 
 function Categories() {
+    
+    useEffect(async() => {await fetchQuizzes()}, []);
+    const {quizzes , setQuiz} = useState([]);
+    const navigate = useNavigate();
+
+    const fetchQuizzes = async () => {
+        console.log("fyyyyyyuffffffffffffk");
+        try {
+            console.log("body:", {});
+            const options = {
+                method: 'GET',
+                Headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({})
+            };
+            const result = await fetch('http://localhost:4000/quizList', options);
+            if (result.status === 200) {
+                console.log(result);
+                return setQuiz()
+            } else {
+                return alert("failed")
+            }
+        }
+        catch (err) {
+            return alert("failed");
+        }
+    }
+  
     return (
-        <div className="container">
+        <div className="CategoryContainer">
             <div className="categoryLeft">
                 <div>
-                    <h1>Choose Your category</h1>
+                    <h1 className="titleName">Choose Your category</h1>
                 </div>
-                <div >
-                    <div className="options">DSA</div>
-                    <div className="options">Programming</div>
-                    <div className="options">C++</div>
-                    <div className="options">MongoDB</div>
+                <div className="chooseOptions">
+                    <QuizTile onClick={fetchQuizzes} title="DSA" />
+                    <QuizTile onClick={fetchQuizzes} title="programming" />
+                    <QuizTile onClick={fetchQuizzes} title="C++" />
+                    <QuizTile onClick={fetchQuizzes} title="MongoDB" />
                 </div>
             </div>
-            <div className="categoryRightimg">
-
-            </div>
+            <div className="categoryimg"></div>
         </div>
     )
 }

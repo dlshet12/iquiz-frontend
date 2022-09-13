@@ -1,8 +1,9 @@
-/* .container {
+.container {
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .registerRight{
@@ -15,19 +16,24 @@
     margin-right: -100px;
     margin-top: -90px; 
 }
- h1 {
+.registerTitle {
     color: #000000;
     font-family: "McLaren", cursive;
     font-size: 55px;
     font-weight: 300; 
     text-shadow: 2px 4px #565050;
+    margin: 0;
+    padding: 0;
    } 
 .nametextField {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.textfield{
+.Ftextfield{
     display: flex;
    flex-direction: column;
    justify-content: space-around;
@@ -40,10 +46,21 @@
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
-.button{
+.buttoncontainer{
     display: flex;
     flex-direction: row;
-    
+    align-items: flex-start;
+    justify-content: space-between;   
+}
+.rightsubcontainer{
+    margin-top: 40px;
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
 }
 
 input::placeholder{
@@ -59,5 +76,12 @@ input::placeholder{
     
 }
 
+.rightsubcontainer {
+    height: 10%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between; 
+}
 
- */

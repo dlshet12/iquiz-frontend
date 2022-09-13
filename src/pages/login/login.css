@@ -42,6 +42,9 @@
 .logo > span {
     color: black;
 }
+.logo > img {
+    background-image: url("../../asset/picture/YkAw.gif");
+}
 
 .heading {
     margin-top: 50px;

@@ -9,25 +9,25 @@ function Register() {
             </div>
             <div className="registerRight">
                 <div>
-                    <h1>Create Your Account</h1>
+                    <h1 className="registerTitle">Create Your Account</h1>
                 </div>
-                <div>
+                <div className="rightsubcontainer">
                     <div>
                         <div className="nametextField">
-                            <input className="textfield" type="text" placeholder="First Name" />
-                            <input className="textfield" type="text" placeholder="Last Name" />
+                            <input className="Ftextfield" type="text" placeholder="First Name" />
+                            <input className="Ftextfield" type="text" placeholder="Last Name" />
                             </div>
                             <div className="credentialtext">
-                                <input className="textfield" type="text" placeholder="Email" />
-                                <input className="textfield" type="text" placeholder="password" />
-                                <input className="textfield" type="text" placeholder="Role" />
+                                <input className="Ftextfield" type="text" placeholder="Email" />
+                                <input className="Ftextfield" type="text" placeholder="password" />
+                                <input className="Ftextfield" type="text" placeholder="Role" />
                             </div>
                        
                     </div>
-                    <div className="button">
-                        <button className="textfield" style={{backgroundColor:"#F68F00", color:'white', boxShadow:'4px 3px #cdb4b4'}} type="button">Register</button>
-                        <div>or</div>
-                        <button className="textfield" style={{ boxShadow:'4px 3px #cdb4b4'}}  type="button">Log In</button>
+                    <div className="buttoncontainer">
+                        <button className="Ftextfield" style={{backgroundColor:"#F68F00", color:'white', boxShadow:'4px 3px #cdb4b4'}} type="button">Register</button>
+                        <div className="ortext">or</div>
+                        <button className="Ftextfield" style={{ boxShadow:'4px 3px #cdb4b4'}}  type="button">Log In</button>
                     </div>
                 </div>
             </div>
