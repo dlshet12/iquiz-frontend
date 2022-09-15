@@ -4,7 +4,7 @@ import "./register.css";
 
 function Register() {
     return (
-        <div className="container">
+        <div className="registercontainer">
             <div className="registerLeftimg">
             </div>
             <div className="registerRight">

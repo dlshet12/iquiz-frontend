@@ -1,10 +1,10 @@
-/* .container {
+.scorecontainer {
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
 }
- h1 {
+.scoreTitle {
     margin-top: 40px;
     margin-left: -160px;
      color: #090000;
@@ -27,23 +27,27 @@
  }
 .scorenum.right {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 40px;
     margin-top: 300px;
     color: #000000;
     border-radius: 0 20px 20px 0;
    background-color:#F68F00 ;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
+   box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.456);
+  
 }
 .scorenum.left {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 40px;
     margin-top: 300px;
     color: #000000;
-    border-radius: 0 20px 20px 0;
+    border-radius: 20px 0 0 20px;
    background-color:#EACECE ;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
-} */
+   box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.456);
+}
+.scorenum {
+    display: flex;
+    flex-direction: row;
+
+}

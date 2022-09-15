@@ -3,9 +3,9 @@ import "./questions.css";
 
 function Questions() {
     return (
-        <div className="container">
-            <div className="tophead">
-                <h1>DSA</h1>
+        <div className="questionscontainer">
+            <div >
+                <h1 className="questionTile">DSA</h1>
             </div>
             <div className="questionbody">
                 <div>
