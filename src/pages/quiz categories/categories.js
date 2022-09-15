@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom'
 import QuizTile from "../../components/quizTitle/quizTitle";
 
 function Categories() {
-    
-    useEffect(async() => {await fetchQuizzes()}, []);
+    console.log("heeelloooooo");
     const {quizzes , setQuiz} = useState([]);
     const navigate = useNavigate();
-
+    
+    useEffect(() => {fetchQuizzes();},[]);
+  
     const fetchQuizzes = async () => {
-        console.log("fyyyyyyuffffffffffffk");
         try {
             console.log("body:", {});
             const options = {
@@ -20,7 +20,6 @@ function Categories() {
             };
             const result = await fetch('http://localhost:4000/quizList', options);
             if (result.status === 200) {
-                console.log(result);
                 return setQuiz()
             } else {
                 return alert("failed")
