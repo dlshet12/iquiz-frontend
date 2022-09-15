@@ -34,7 +34,7 @@ function Login() {
       console.log(res);
       if (res.status === 200) {
         Cookies.set("token", res.body.token)
-        return navigate("/quizList")
+        return navigate("/Categories")
        
       } else {
         return alert("login failed, please check your email and password")
@@ -60,11 +60,12 @@ function Login() {
               <TextField onChange={handleEmailChange} type="email" placeholder="Email" />
               <TextField onChange={handlePasswordChange} type="password" placeholder="Password" />
               <div>
-                <p className="forgotPasswordText">forgot Your Password?</p>
+                <p className="alternativeText">forgot Your Password?</p>
               </div>
             </div>
             <div className="loginButtonContainer">
               <Button onButtonClick={handleLogin} title="Login" />
+              <p className="alternativeText">or create a new account</p>
               <Button isPrimary={false} title="Register" />
             </div>
           </div>
