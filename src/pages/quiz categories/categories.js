@@ -1,38 +1,33 @@
 import React, { useEffect, useState } from "react";
 import "./categories.css";
-import { useNavigate } from 'react-router-dom'
 import QuizTile from "../../components/quizTitle/quizTitle";
+import Cookies from "js-cookie";
 
 function Categories() {
-    console.log("heeelloooooo");
-    const { quizzes, setQuiz } = useState([]);
-    const navigate = useNavigate();
-
+    const [quizzes, setQuiz] = useState([]);
     useEffect(() => { fetchQuizzes(); }, []);
-
     const fetchQuizzes = async () => {
         try {
             console.log("body:", {});
+            const token = Cookies.get('token')
             const options = {
                 method: 'GET',
-                Headers: { 'Content-Type': 'application/json' },
-
+                headers: { 'Content-Type': 'application/json', 'authorization': "$Bearer " + token }
             };
-            console.log("abhays is 🍥🍥🍥🍥🍣")
             const result = await fetch('http://localhost:4000/quizList', options);
             if (result.status === 200) {
                 const data = await result.json()
+                console.log("quiz data", data.data);
                 return setQuiz(data.data)
             } else {
-                return alert("")
+                return alert("Quiz not found")
             }
         }
         catch (err) {
             console.log("err", err);
-            return alert("failed");
+            return alert("fail to load");
         }
     }
-
     return (
         <div className="CategoryContainer">
             <div className="categoryLeft">
@@ -40,12 +35,13 @@ function Categories() {
                     <h1 className="titleName">Choose Your category</h1>
                 </div>
                 <div className="chooseOptions">
-                {
-                    quizzes.map((ele) => {
-                   return <QuizTile onClick={() => {}} title={ele.title}/>
-              
-                   })
-                }
+                    {
+
+                        quizzes.map((ele) => {
+                            return <QuizTile onClick={() => { }} title={ele.title} quizId={ele._id} />
+
+                        })
+                    }
                 </div>
             </div>
             <div className="categoryimg"></div>

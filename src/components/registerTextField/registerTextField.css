@@ -1,0 +1,16 @@
+.Ftextfield{
+    display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   width: 100%;
+   padding: 17px 24px;
+   margin: 10px;
+   border: #EACECE;
+    border-radius: 12px;
+   background-color: #EACECE;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.Ftextfield::placeholder{
+    color: #000;
+}

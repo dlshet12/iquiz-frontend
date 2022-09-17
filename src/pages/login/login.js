@@ -21,19 +21,24 @@ function Login() {
     setPassword(event.target.value);
     console.log('value is:', event.target.value);
   }
+
+  const registerClick = () => {
+    navigate('/register');
+  }
   const handleLogin = async () => {
     try {
       console.log("body:", { email, password: password });
       const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({ password: password, email: email })
       };
 
       const res = await fetch('http://localhost:4000/login', requestOptions);
       console.log(res);
       if (res.status === 200) {
-        Cookies.set("token", res.body.token)
+        const data = await res.json()
+        Cookies.set("token", data.token)
         return navigate("/Categories")
        
       } else {
@@ -66,7 +71,7 @@ function Login() {
             <div className="loginButtonContainer">
               <Button onButtonClick={handleLogin} title="Login" />
               <p className="alternativeText">or create a new account</p>
-              <Button isPrimary={false} title="Register" />
+              <Button onButtonClick={registerClick} isPrimary={false} title="Register" />
             </div>
           </div>
         </div>

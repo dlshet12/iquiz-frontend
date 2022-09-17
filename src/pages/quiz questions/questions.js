@@ -1,37 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./questions.css";
+import TestQuestions from "../../components/testquestions/testquestions"
+import Cookies from "js-cookie";
+import { useNavigate} from 'react-router-dom';
 
 function Questions() {
+    const navigate = useNavigate();
+    const [ questions , setquestion ] = useState([]);
+    useEffect(() => {fetchQuestions();},[]);
+
+    const handleSubmit = () => {
+        navigate('/score');
+   }
+
+    const fetchQuestions = async() => 
+     {
+        try {
+            console.log("body:",{});
+            const token = Cookies.get('token')
+            const quizQuestion = {
+                method: 'GET',
+                headers:{'Content-Type': 'application/json','authorization': "$Bearer " + token  } 
+            };
+            const sol = await fetch('http://localhost:4000/quizQuestion',quizQuestion);
+            if(sol.status===200) {
+              const data = await sol.json()
+              console.log("question",data.data);
+             return setquestion(data.data);
+            }
+                else {
+               return alert ("question not found")
+            }
+        }
+            catch(err){
+               console.log("errrrrrrr",err);
+               return alert("fail to load");
+            } 
+        }
     return (
         <div className="questionscontainer">
             <div >
                 <h1 className="questionTile">DSA</h1>
             </div>
             <div className="questionbody">
-                <div>
-                    <div>1.A website that lets anyone add, edit, or delete pages of content is called a</div>
-                  <div><input type="radio"/>wiki</div>
-                    <div><input type="radio"/>online forum</div>
-                    <div><input type="radio"/>lurker site</div>
-                    <div><input type="radio"/>social network</div>
-                </div>
-                <div>
-                    <div>2.Today the most popular social networking site is</div>
-                    <div><input type="radio"/>op1</div>
-                    <div><input type="radio"/>op2</div>
-                    <div><input type="radio"/>op3</div>
-                    <div><input type="radio"/>op4</div>
-                </div>
-                <div>
-                    <div>3.Creating a website or group that looks like it originated from concerned grassroots efforts of citizens is known as</div>
-                    <div><input type="radio"/>op1</div>
-                    <div><input type="radio"/>op2</div>
-                    <div><input type="radio"/>op3</div>
-                    <div><input type="radio"/>op4</div>
-                </div>
+            {
+                questions.map((ele) => {
+                    return <TestQuestions  />
+                    
+                })
+            }
+               
             </div>
             <div className="subbutton">
-                <button className="buttonstyle" style={{backgroundColor:"#F68F00", color:'white', boxShadow:'4px 3px #cdb4b4'}} type="button">Submit</button>
+                <button onClick={handleSubmit} className="buttonstyle" style={{backgroundColor:"#F68F00", color:'white', boxShadow:'4px 3px #cdb4b4'}} type="button">Submit</button>
+                
             </div>
         </div>
     )

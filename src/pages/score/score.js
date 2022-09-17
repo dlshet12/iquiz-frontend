@@ -1,6 +1,7 @@
 import React from "react";
 import "./score.css";
 
+
 function Score() {
     return (
         <div className="scorecontainer">

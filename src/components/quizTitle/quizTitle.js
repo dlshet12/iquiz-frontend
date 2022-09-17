@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom'
 import "./quizTitle.css"
-const QuizTile = ({ title, onClick = function () { }, quizId }) => {
+const QuizTile = ({ title, quizId }) => {
+    const navigate = useNavigate();
     return (
-        <button onClick={onClick} className="quiztile" quizId={quizId}>{title}</button>
+        <button onClick={() => {navigate("/Questions",{state:{quizId : quizId}})}} className="quiztile">{title}</button>
     );
 }
 export default QuizTile;
