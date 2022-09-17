@@ -37,8 +37,9 @@ function Login() {
       const res = await fetch('http://localhost:4000/login', requestOptions);
       console.log(res);
       if (res.status === 200) {
-        const data = await res.json()
-        Cookies.set("token", data.token)
+        const resJson = await res.json()
+        const token = Cookies.set("token", resJson.data.token)
+        console.log("token after set: ", token)
         return navigate("/Categories")
        
       } else {

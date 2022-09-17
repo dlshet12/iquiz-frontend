@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./questions.css";
 import TestQuestions from "../../components/testquestions/testquestions"
 import Cookies from "js-cookie";
-import { useNavigate} from 'react-router-dom';
+import { useNavigate, useLocation} from 'react-router-dom';
 
 function Questions() {
+    const {state} = useLocation();
+    const {quizId} = state;
     const navigate = useNavigate();
     const [ questions , setquestion ] = useState([]);
     useEffect(() => {fetchQuestions();},[]);
@@ -15,18 +17,18 @@ function Questions() {
 
     const fetchQuestions = async() => 
      {
+        console.log("QUIZ ID: ", quizId)
         try {
-            console.log("body:",{});
             const token = Cookies.get('token')
-            const quizQuestion = {
+            const header = {
                 method: 'GET',
-                headers:{'Content-Type': 'application/json','authorization': "$Bearer " + token  } 
+                headers:{'Content-Type': 'application/json','authorization': "Bearer " + token  } 
             };
-            const sol = await fetch('http://localhost:4000/quizQuestion',quizQuestion);
+            const sol = await fetch(`http://localhost:4000/quizQuestion/${quizId}`,header);
             if(sol.status===200) {
-              const data = await sol.json()
-              console.log("question",data.data);
-             return setquestion(data.data);
+              const solRes = await sol.json()
+              console.log("questipons: ", solRes.data)
+              return setquestion(solRes.data);
             }
                 else {
                return alert ("question not found")
@@ -44,8 +46,8 @@ function Questions() {
             </div>
             <div className="questionbody">
             {
-                questions.map((ele) => {
-                    return <TestQuestions  />
+                questions.map((ele, idx) => {
+                    return <TestQuestions question={ele.question} options={ele.option} key={idx} />
                     
                 })
             }

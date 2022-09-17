@@ -8,11 +8,11 @@ function Categories() {
     useEffect(() => { fetchQuizzes(); }, []);
     const fetchQuizzes = async () => {
         try {
-            console.log("body:", {});
             const token = Cookies.get('token')
+            console.log("token: ", token)
             const options = {
                 method: 'GET',
-                headers: { 'Content-Type': 'application/json', 'authorization': "$Bearer " + token }
+                headers: { 'Content-Type': 'application/json', 'authorization': "Bearer " + token }
             };
             const result = await fetch('http://localhost:4000/quizList', options);
             if (result.status === 200) {

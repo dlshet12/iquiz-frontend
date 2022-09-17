@@ -1,9 +1,17 @@
 import react from "react";
 import "./testquestions.css"
-const TestQuestions = ({ questions,options, quizId}) => {
+const TestQuestions = ({ question,options}) => {
    
     return (
-         <div >{questions}{options}</div>
+        <div>
+            <div >{question}</div>
+            <div >{options[0]}</div>
+            <div >{options[1]}</div>
+            <div >{options[2]}</div>
+            <div >{options[3]}</div>
+        </div>
+         
+
     );
 } 
 export default TestQuestions;
