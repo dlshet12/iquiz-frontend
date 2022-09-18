@@ -47,7 +47,7 @@ function Questions() {
             <div className="questionbody">
             {
                 questions.map((ele, idx) => {
-                    return <TestQuestions question={ele.question} options={ele.option} key={idx} />
+                    return <TestQuestions question={ele.question} options={ele.option} key={idx} qnum={idx} />
                })
             }
             </div>
