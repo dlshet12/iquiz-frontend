@@ -1,70 +1,67 @@
 .registercontainer {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.registerRight{
-    height: 100%;
-    width: 50%;
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-right: -100px;
-    margin-top: -90px; 
+.registerRight {
+  height: 100%;
+  width: 50%;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: -100px;
+  margin-top: -90px;
 }
 .registerTitle {
-    color: #000000;
-    font-family: "McLaren", cursive;
-    font-size: 55px;
-    font-weight: 300; 
-    text-shadow: 2px 4px #565050;
-    margin: 0;
-    padding: 0;
-   } 
+  color: #000000;
+  font-family: 'McLaren', cursive;
+  font-size: 55px;
+  font-weight: 300;
+  text-shadow: 2px 4px #565050;
+  margin: 0;
+  padding: 0;
+}
 .nametextField {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.buttoncontainer{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;   
+.buttoncontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.rightsubcontainer{
-    margin-top: -480px;
+.rightsubcontainer {
+  margin-top: -480px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.registerLeftimg{
-    background-image: url("../../asset/picture/register.png");
-    background-repeat: no-repeat;
-    margin-top: 170px;
-   padding: 90px;
-    height: 100%;
-    width: 50%;
-    
+.registerLeftimg {
+  background-image: url('../../asset/picture/register.png');
+  background-repeat: no-repeat;
+  margin-top: 170px;
+  padding: 90px;
+  height: 100%;
+  width: 50%;
 }
 
 .rightsubcontainer {
-    height: 10%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between; 
+  height: 10%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-

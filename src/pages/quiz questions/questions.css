@@ -1,34 +1,30 @@
-
-.questionTile{
-    margin-top: -140px;
-    margin-left: 730px;
-     color: #040300;
-     font-family: "McLaren", cursive;
-     font-size: 55px;
-     font-weight: 300; 
-     text-shadow: 2px 4px #565050;
-    position: absolute;
-} 
-.subbutton{
-        position: relative;
-        padding: 10px 5px 60px 8px;
-       
+.questionTile {
+  margin-top: -140px;
+  margin-left: 730px;
+  color: #040300;
+  font-family: 'McLaren', cursive;
+  font-size: 55px;
+  font-weight: 300;
+  text-shadow: 2px 4px #565050;
+  position: absolute;
 }
-.buttonstyle{
+.subbutton {
+  position: relative;
+  padding: 10px 5px 60px 8px;
+}
+.buttonstyle {
   justify-content: space-around;
   padding: 12px 40px;
   margin-left: 720px;
-border-color:#F68F00 ;
-    border-radius: 12px;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-color: #f68f00;
+  border-radius: 12px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .questionbody {
-    margin-top: 190px;
-    margin-left: 120px;
-    margin-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    
-   
+  margin-top: 190px;
+  margin-left: 120px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
 }

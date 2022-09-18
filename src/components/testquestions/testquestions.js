@@ -9,17 +9,17 @@ const TestQuestions = ({ question, questionId, options, qnum, onChange }) => {
       <div>
         <input
           type="radio"
-          name={options[0]+qnum}
+          name={qnum}
           value={0}
           onChange={(event) => {
-            console.log("changed")
+            console.log('changed');
             onChange(questionId, event.target.value);
           }}
         />
         {options[0]}
         <input
           type="radio"
-          name={options[1]+qnum}
+          name={qnum}
           value={1}
           onChange={(event) => {
             onChange(questionId, event.target.value);
@@ -28,7 +28,7 @@ const TestQuestions = ({ question, questionId, options, qnum, onChange }) => {
         {options[1]}
         <input
           type="radio"
-          name={options[2]+qnum}
+          name={qnum}
           value={2}
           onChange={(event) => {
             onChange(questionId, event.target.value);
@@ -37,7 +37,7 @@ const TestQuestions = ({ question, questionId, options, qnum, onChange }) => {
         {options[2]}
         <input
           type="radio"
-          name={options[3]+qnum}
+          name={qnum}
           value={3}
           onChange={(event) => {
             onChange(questionId, event.target.value);

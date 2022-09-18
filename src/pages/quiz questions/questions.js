@@ -13,10 +13,35 @@ function Questions() {
   useEffect(() => {
     fetchQuestions();
   }, []);
-  const handleAnswerChange = (questionId, answer) => setAnswers({[questionId]: answer, ...answers})
-  const handleSubmit = () => {
-    console.log("Answers: ", answers)
-    //navigate('/score');
+  const handleAnswerChange = (questionId, answer) => {
+    console.log('QuestionId: ', questionId);
+    setAnswers({ ...answers, [questionId]: answer });
+  };
+  const handleSubmit = async () => {
+    console.log('Answers: ', answers);
+    const questionsList = Object.keys(answers);
+    const answersPayload = [];
+    for (const que of questionsList) {
+      answersPayload.push({
+        questionId: que,
+        answer: answers[que],
+      });
+    }
+    const token = Cookies.get('token');
+    const info = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: 'Bearer ' + token,
+      },
+      body: JSON.stringify({ quizId: quizId, answers: answersPayload }),
+    };
+    const response = await fetch('http://localhost:4000/submitQuiz', info);
+    if (response.status === 200) {
+      return navigate('/score', { state: { quizId: quizId } });
+    } else {
+      return alert('registeration failed');
+    }
   };
 
   const fetchQuestions = async () => {
@@ -57,9 +82,8 @@ function Questions() {
             <TestQuestions
               question={ele.question}
               options={ele.option}
-              key={idx}
               qnum={idx}
-              questionId={ele.questionId}
+              questionId={ele._id}
               onChange={handleAnswerChange}
             />
           );
