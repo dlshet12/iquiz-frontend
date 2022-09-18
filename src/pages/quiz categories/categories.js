@@ -38,7 +38,7 @@ function Categories() {
                     {
 
                         quizzes.map((ele) => {
-                            return <QuizTile onClick={() => { }} title={ele.title} quizId={ele._id} />
+                            return <QuizTile onClick={() => { }} title={ele.title} quizId={ele._id}/>
 
                         })
                     }
