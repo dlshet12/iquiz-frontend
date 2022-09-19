@@ -21,12 +21,13 @@ function Questions() {
     console.log('Answers: ', answers);
     const questionsList = Object.keys(answers);
     const answersPayload = [];
-    for (const que of questionsList) {
+    for (const que of questionsList) { 
       answersPayload.push({
         questionId: que,
-        answer: answers[que],
+        answer:parseInt(answers[que]),
       });
     }
+    console.log(answersPayload);
     const token = Cookies.get('token');
     const info = {
       method: 'POST',
@@ -84,6 +85,7 @@ function Questions() {
               options={ele.option}
               qnum={idx}
               questionId={ele._id}
+              key={idx}
               onChange={handleAnswerChange}
             />
           );

@@ -39,9 +39,9 @@ function Categories() {
           <h1 className="titleName">Choose Your category</h1>
         </div>
         <div className="chooseOptions">
-          {quizzes.map((ele) => {
+          {quizzes.map((ele,idx) => {
             return (
-              <QuizTile onClick={() => {}} title={ele.title} quizId={ele._id} />
+              <QuizTile onClick={() => {}} title={ele.title} quizId={ele._id} key={idx} />
             );
           })}
         </div>
